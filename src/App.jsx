@@ -916,6 +916,212 @@ const GlobalStyles = () => (
     @media (prefers-reduced-motion:reduce){
       *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
     }
+
+    /* =====================================================================
+       PREMIUM RESPONSIVE OVERRIDES — mobile first / tablet / desktop
+       ===================================================================== */
+    html,body,#root{width:100%;max-width:100%;overflow-x:hidden}
+    body{min-width:320px}
+    button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+    button,a{touch-action:manipulation}
+    section[id]{scroll-margin-top:88px}
+
+    @media (max-width:639px){
+      html{scroll-padding-top:72px}
+      section[id]{scroll-margin-top:72px}
+
+      /* Navbar */
+      header nav{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right))}
+      header .group span.leading-none{min-width:0}
+      header .group span.leading-none>span:first-child{font-size:14px;white-space:nowrap}
+      header .group span.leading-none>span:last-child{font-size:9px;white-space:nowrap;max-width:150px;overflow:hidden;text-overflow:ellipsis}
+      header .group>span:first-child{width:40px;height:40px;border-radius:12px}
+
+      /* Hero */
+      #home{min-height:100svh;min-height:100dvh;padding-bottom:0}
+      #home>div.relative.mx-auto{padding-left:16px;padding-right:16px;padding-top:106px;padding-bottom:188px}
+      #home .max-w-\[720px\]{max-width:100%}
+      #home h1{font-size:clamp(2.05rem,10.2vw,3rem);line-height:1.04;letter-spacing:-.035em;margin-top:18px;max-width:100%}
+      #home h1 br{display:none}
+      #home p{font-size:15px;line-height:1.65;max-width:100%;margin-top:16px}
+      #home .a-rise.mt-9{margin-top:24px;display:grid;grid-template-columns:1fr;gap:10px}
+      #home .a-rise.mt-9>a,#home .a-rise.mt-9>button{width:100%;min-height:52px}
+      #home .a-rise.mt-8{margin-top:22px;gap:10px 18px;font-size:12.5px}
+      #home .mt-14{margin-top:28px}
+      #home .mt-14>div:first-child button{width:42px;height:42px}
+      #home .mt-14 .ml-auto{display:none}
+      #home .glass-dark{border-radius:20px 20px 0 0}
+      #home .glass-dark>div{padding:14px 8px}
+      #home .glass-dark p:first-child{font-size:20px}
+      #home .glass-dark p:last-child{font-size:10.5px;line-height:1.3}
+      #home .absolute.inset-0>img,#home .absolute.inset-0>video{object-position:center center}
+      #home .absolute.inset-0 video{min-height:100%;object-fit:cover}
+
+      /* Generic section rhythm */
+      main>section{padding-top:64px!important;padding-bottom:64px!important}
+      main>section:first-child{padding-top:0!important}
+      .mx-auto.max-w-\[1240px\]{width:100%;max-width:1240px;padding-left:16px;padding-right:16px}
+      .font-display{overflow-wrap:anywhere}
+
+      /* Headings */
+      .max-w-2xl.mb-12,.max-w-2xl.mb-16{margin-bottom:32px}
+      .max-w-2xl h2{font-size:clamp(1.75rem,8vw,2.35rem);line-height:1.08}
+      .max-w-2xl p{font-size:14px;line-height:1.65}
+
+      /* Partner marquee */
+      .marquee-wrap{margin-top:28px}
+      .marquee-track{gap:10px}
+      .marquee-track>div{padding:13px 16px;border-radius:16px}
+      .marquee-track>div>span:first-child{width:32px;height:32px}
+      .marquee-track>div>span:last-child{font-size:13px}
+      .marquee-wrap+div{margin-top:28px}
+
+      /* Cards */
+      .card-soft:hover{transform:none;box-shadow:0 10px 30px -18px rgba(5,46,43,.30)}
+      .grid{min-width:0}
+      #tests .grid.sm\:grid-cols-2,#packages .grid.md\:grid-cols-2,#radiology .grid.sm\:grid-cols-2{grid-template-columns:1fr}
+      #tests .grid.lg\:grid-cols-3,#packages .grid.lg\:grid-cols-3,#radiology .grid.lg\:grid-cols-3{grid-template-columns:1fr}
+
+      /* Search */
+      #tests input{font-size:14px;padding-top:14px;padding-bottom:14px;padding-left:48px}
+      #tests .no-scrollbar{margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}
+
+      /* Test cards */
+      #tests article{padding:20px;border-radius:20px}
+      #tests article h3{font-size:15.5px;padding-right:56px}
+      #tests article .shimmer-price{font-size:23px}
+      #tests article .mt-5.flex{align-items:center}
+      #tests article .mt-5.flex.gap-2.pt-1{display:grid;grid-template-columns:minmax(0,1fr) 42px}
+      #tests article .mt-5.flex.gap-2.pt-1>a{width:42px;height:42px}
+
+      /* Home visit */
+      #home-visit .grid.lg\:grid-cols-2{grid-template-columns:1fr}
+      #home-visit .mt-9.grid{grid-template-columns:1fr}
+      #home-visit .glow-follow{margin-top:4px;padding:5px;border-radius:24px}
+      #home-visit .glow-follow img{height:300px;border-radius:19px}
+      #home-visit .glow-follow .absolute.bottom-7{left:18px;right:18px;bottom:18px}
+      #home-visit .glow-follow .absolute.bottom-7 p:first-child{font-size:18px}
+      #home-visit .glow-follow .absolute.bottom-7 span{width:46px;height:46px}
+      #home-visit .mt-9.flex{display:grid;grid-template-columns:1fr}
+      #home-visit .mt-9.flex>a,#home-visit .mt-9.flex>button{width:100%}
+
+      /* Packages */
+      #packages article{padding:21px;border-radius:22px}
+      #packages article .mt-5.flex{flex-wrap:wrap}
+      #packages article .mt-5.flex>span:first-child{font-size:31px}
+      #packages article .mt-6.flex{align-items:stretch}
+      #packages article .mt-6.flex>button:first-child{min-height:46px}
+      #packages article .mt-6.flex>button:last-child{white-space:nowrap}
+
+      /* Radiology */
+      #radiology button{padding:18px;border-radius:19px;gap:14px}
+      #radiology button>span:first-of-type{width:48px;height:48px}
+      #radiology button>span:last-of-type{min-width:0}
+      #radiology button>span:last-of-type>span{overflow-wrap:anywhere}
+      #radiology .mt-14>div{padding:22px}
+      #radiology .mt-14 .grid.sm\:grid-cols-2{grid-template-columns:1fr}
+
+      /* Gallery */
+      .aspect-\[4\/3\]{aspect-ratio:4/3}
+      .marquee-wrap:hover .marquee-track{animation-play-state:running}
+      section.bg-\[\#031e1c\] .group.relative.overflow-hidden.rounded-\[28px\] video{height:260px;min-height:260px;object-fit:cover}
+      section.bg-\[\#031e1c\] .flex.snap-x figure{width:82%;min-width:82%;}
+
+      /* Trust / VMM */
+      section.relative.-mt-14{margin-top:0;padding-top:24px!important}
+      section.relative.-mt-14 .grid.md\:grid-cols-3{grid-template-columns:1fr}
+      section.relative.-mt-14 .card-soft{padding:20px}
+      section.bg-\[\#f2f8f6\] .mx-auto.max-w-3xl .flex.w-fit{width:100%;overflow-x:auto;justify-content:flex-start;padding:4px}
+      section.bg-\[\#f2f8f6\] .mx-auto.max-w-3xl .flex.w-fit button{flex:1 0 auto;padding-left:17px;padding-right:17px}
+      section.bg-\[\#f2f8f6\] .mx-auto.max-w-3xl .rounded-\[26px\]{padding:24px 20px}
+
+      /* About */
+      .rounded-\[28px\]{max-width:100%}
+      section.bg-white .grid.lg\:grid-cols-2{grid-template-columns:1fr}
+      section.bg-white .relative img{height:290px}
+      section.bg-white .relative .absolute.-bottom-6{right:10px;bottom:-14px;width:175px;padding:14px}
+      section.bg-white .relative .absolute.-bottom-6 p.font-display{font-size:20px}
+      section.bg-white .relative .absolute.-left-3{display:none}
+      section.bg-white .grid.grid-cols-3{gap:8px}
+      section.bg-white .grid.grid-cols-3>div{padding:14px 8px}
+      section.bg-white .grid.grid-cols-3>div p:last-child{font-size:10.5px;line-height:1.25}
+
+      /* Testimonials */
+      section.bg-white .max-w-3xl.rounded-\[28px\]{padding:28px 20px}
+      section.bg-white .max-w-3xl.rounded-\[28px\] p.font-display{font-size:17px;line-height:1.55}
+
+      /* FAQ */
+      section.bg-\[\#f2f8f6\] .space-y-3 button{padding:17px 16px}
+      section.bg-\[\#f2f8f6\] .space-y-3 button>span:first-child{font-size:14.5px}
+      section.bg-\[\#f2f8f6\] .space-y-3 p{padding-left:16px;padding-right:16px;font-size:13.5px}
+
+      /* Contact */
+      #contact .grid.lg\:grid-cols-\[minmax\(0\,1\.05fr\)_minmax\(0\,\.95fr\)\]{grid-template-columns:1fr}
+      #contact .mt-9.flex{display:grid;grid-template-columns:1fr}
+      #contact .mt-9.flex button{width:100%}
+      #contact .group.flex{padding:17px 16px;gap:13px}
+      #contact .group.flex>span:nth-child(2){min-width:0}
+      #contact .group.flex>span:nth-child(2)>span:last-child{font-size:14px;overflow-wrap:anywhere}
+      #contact .group.flex>svg{display:none}
+
+      /* Footer */
+      footer{padding-top:52px}
+      footer .grid.md\:grid-cols-2{grid-template-columns:1fr 1fr;gap:30px 18px}
+      footer .lg\:col-span-1{grid-column:1/-1}
+      footer .flex.flex-col.items-center.justify-between{padding-bottom:max(24px,env(safe-area-inset-bottom))}
+      footer .font-display.translate-y-\[22\%\]{font-size:22vw}
+
+      /* Floating actions */
+      .fixed.bottom-5.right-5{right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));gap:8px}
+      .fixed.bottom-5.right-5 button.h-12{width:44px;height:44px}
+      .fixed.bottom-5.right-5 a.h-14{width:50px;height:50px}
+      .fixed.bottom-5.right-5 a span.absolute{display:none}
+
+      /* Modal */
+      .fixed.inset-0.z-\[120\]{padding:0}
+      .fixed.inset-0.z-\[120\]>div.relative{max-height:calc(100svh - 8px);max-height:calc(100dvh - 8px);border-radius:24px 24px 0 0}
+      .fixed.inset-0.z-\[120\] form{padding:22px 18px max(24px,env(safe-area-inset-bottom))}
+      .fixed.inset-0.z-\[120\] .grid.sm\:grid-cols-2{grid-template-columns:1fr}
+      .fixed.inset-0.z-\[120\] .flex.flex-col-reverse{display:grid}
+      .fixed.inset-0.z-\[120\] .flex.flex-col-reverse button{width:100%}
+    }
+
+    @media (min-width:640px) and (max-width:1023px){
+      .mx-auto.max-w-\[1240px\]{padding-left:28px;padding-right:28px}
+      main>section{padding-top:82px!important;padding-bottom:82px!important}
+      #home>div.relative.mx-auto{padding-top:128px;padding-bottom:180px}
+      #home h1{font-size:clamp(3rem,7vw,4.1rem);max-width:760px}
+      #home .a-rise.mt-9{gap:12px}
+      #home .glass-dark>div{padding:20px 16px}
+      #home-visit .glow-follow img{height:410px}
+      #packages article{padding:24px}
+      #radiology .mt-14>div{padding:30px}
+      footer .grid.md\:grid-cols-2{grid-template-columns:1fr 1fr}
+    }
+
+    @media (min-width:1024px){
+      #home .absolute.inset-0>img,#home .absolute.inset-0>video{object-position:center center}
+    }
+
+    @media (hover:none), (pointer:coarse){
+      .card-soft:hover,.group:hover{transform:none}
+      .glow-follow::before{display:none}
+      .sheen:hover::after{animation:none}
+      .link-underline:hover::after{transform:scaleX(0)}
+    }
+
+    @media (max-width:380px){
+      #home h1{font-size:2rem}
+      #home .a-rise.mt-8{font-size:11.5px}
+      #home .glass-dark p:first-child{font-size:18px}
+      .fixed.bottom-5.right-5 a.h-14{width:48px;height:48px}
+      footer .grid.md\:grid-cols-2{grid-template-columns:1fr}
+    }
+
+    @supports (padding:max(0px)){
+      header{padding-top:max(0px,env(safe-area-inset-top))}
+    }
+
   `}</style>
 );
 
@@ -2694,7 +2900,7 @@ function Radiology() {
 
 const GALLERY = [
   { src: IMG.g1, cap: "Sample accessioning" },
-  { src: IMG.g2, cap: "Automated analysers" },
+  { src: IMG.g6, cap: "Automated analysers" },
   { src: IMG.g3, cap: "Microbiology bench" },
   { src: IMG.g4, cap: "Molecular diagnostics" },
   { src: IMG.g5, cap: "Report verification" },
