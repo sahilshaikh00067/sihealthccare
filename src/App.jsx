@@ -91,20 +91,20 @@ const NAV = [
 ];
 
 const HERO_SLIDES = [
-  {
-    type: "image",
-    src: IMG.hero1,
-    kicker: "NABL certified partner labs",
-    title: "Because your health deserves care, not compromise.",
-    sub: "Comprehensive diagnostics collected from the comfort of your home.",
-  },
-  {
+    {
     type: "video",
     src: VIDEO.hero,
     poster: IMG.hero2,
     kicker: "Free home sample collection",
     title: "A phlebotomist at your door within 60 minutes.",
     sub: "Sterile, single-use kits. Trained staff. Zero collection charges.",
+  },
+  {
+    type: "image",
+    src: IMG.hero1,
+    kicker: "NABL certified partner labs",
+    title: "Because your health deserves care, not compromise.",
+    sub: "Comprehensive diagnostics collected from the comfort of your home.",
   },
   {
     type: "image",
